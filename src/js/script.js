@@ -37,10 +37,8 @@ const a = prompt('Один из последних просмотренных ф
 const b = prompt('На сколько оцените его?', '');
 const c = prompt('Один из последних просмотренных фильмов?', '');
 const d = prompt('На сколько оцените его?', '');
-const qa = prompt('Ваш любымый актер?', '');
 
 personalMovieDB.movies[a] = b;
 personalMovieDB.movies[c] = d;
-personalMovieDB.actors[qa]=true;
 
 console.log(personalMovieDB);
