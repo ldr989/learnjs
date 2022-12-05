@@ -254,7 +254,8 @@ const personalMovieDB = {
 for (let i = 0; i < 2; i++) {
     const a = prompt('Один из последних просмотренных фильмов?', ''),
           b = prompt('На сколько оцените его?', '');
-    (a != null && b != null && a != '' && b != '' && a.length < 30) ? personalMovieDB.movies[a] = b : console.log('error');
+    (a != null && b != null && a != '' && b != '' && a.length < 30)
+     ? personalMovieDB.movies[a] = b : console.log('error');
     (a != null && b != null && a != '' && b != '' && a.length < 30) ? console.log('done') : i--;
     (personalMovieDB.count < 10) ? console.log('Просмотренно довольно мало фильмов'): 
     (personalMovieDB.count >= 10 && personalMovieDB.count < 30) ? console.log('Вы классический зритель'):
@@ -262,3 +263,67 @@ for (let i = 0; i < 2; i++) {
 };
 
 console.log(personalMovieDB); */
+
+
+/* for (let i = 20; i >= 10; i--) {
+    if (i == 13){
+        break;
+    }
+    console.log(i);
+} */
+
+/* function sayHello(text) {
+    text = 'Привет, '+ text;
+    return console.log(typeof text);
+}
+
+sayHello('Антон'); */
+
+/* function sayHello(name) {
+    return `Привет, ${name}!`;
+}
+
+sayHello('Антон'); */
+
+/* function returnNeighboringNumbers(number) {
+    let arr = [];
+    arr[0] = number - 1;
+    arr[1] = number;
+    arr[2] = number + 1;
+    return arr;
+    
+}
+console.log(returnNeighboringNumbers(5)); */
+
+
+
+/* function calcSumm(numOne, numTwo) {
+    let result = 1;
+    for (let i = 0; i < numTwo; i++){
+        result *= numOne;
+    }
+    return result;
+}
+console.log(calcSumm(2, 4)); */
+
+/* function getMathResult(num, times) {
+    if (typeof(times) !== 'number' || times <= 0 ){
+        return num;
+    }
+
+    let str = '';
+
+    for (let i = 1; i <= times; i++) {
+        if (i === times) {
+            str += `${num * i}`;
+            // Тут без черточек в конце
+        } else {
+            str += `${num * i}---`;
+            // Это тоже самое, что и
+            // str = str + num * i + "---"
+        }
+    }
+    return str;
+}
+
+console.log(getMathResult(2, 2)); */
