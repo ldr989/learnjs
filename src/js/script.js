@@ -254,8 +254,8 @@ const personalMovieDB = {
 for (let i = 0; i < 2; i++) {
     const a = prompt('Один из последних просмотренных фильмов?', ''),
           b = prompt('На сколько оцените его?', '');
-    (a != null && b != null && a != '' && b != '' && a.length < 30)
-     ? personalMovieDB.movies[a] = b : console.log('error');
+    (a != null && b != null && a != '' && b != '' && a.length < 30) */
+    /* ? personalMovieDB.movies[a] = b : console.log('error');
     (a != null && b != null && a != '' && b != '' && a.length < 30) ? console.log('done') : i--;
     (personalMovieDB.count < 10) ? console.log('Просмотренно довольно мало фильмов'): 
     (personalMovieDB.count >= 10 && personalMovieDB.count < 30) ? console.log('Вы классический зритель'):
