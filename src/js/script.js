@@ -328,7 +328,45 @@ console.log(calcSumm(2, 4)); */
 
 console.log(getMathResult(2, 2)); */
 
-let numberOfFilms;
+function calculateVolumeAndArea(edgesOfCube){ // мой вариант домашнего задания
+    const volumeOfCube = edgesOfCube * edgesOfCube * edgesOfCube;
+    const areaOfFaceOfCube = edgesOfCube * edgesOfCube;
+    const areaOfCube = areaOfFaceOfCube * 6;
+    const calcSumm = "'"+'Объем куба: ' + volumeOfCube + ', площадь всей поверхности: ' + areaOfCube + "'";
+    const shortOne = edgesOfCube !== null && edgesOfCube !== '' && edgesOfCube > 0;
+    const shortTwo = Number.isInteger(edgesOfCube) && typeof edgesOfCube != 'string';
+    
+    if (shortOne && shortTwo ) {
+        return console.log(calcSumm);
+    } else {
+        return console.log('При вычислении произошла ошибка');
+    }
+}
+calculateVolumeAndArea(3);
+
+function calculateVolumeAndArea(length) { // вариант учителя
+    if (typeof (length) !== 'number' || length < 0 || !Number.isInteger(length)) {
+        return "При вычислении произошла ошибка";
+    }
+
+    let volume = 0,
+        area = 0;
+
+    volume = length * length * length;
+    // length ** 3 - это тоже самое, что и выше или варианты через цикл.
+    // ** - это оператор степени, напоминаю. Но онлайн редактор его не принимает =/
+    area = 6 * (length * length);
+
+    return `Объем куба: ${volume}, площадь всей поверхности: ${area}`;
+}
+
+
+
+
+
+
+
+/* let numberOfFilms;
 
 function start () {
     numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
@@ -393,10 +431,9 @@ showMyDB(personalMovieDB.privat);
 
 function writeYourGenres() {
     for (let i = 1; i <= 3; i++) {
-        const genre = prompt(`Ваш любимый жанр по номером ${i}`, '');
-        personalMovieDB.genres[i - 1] = genre;
+        personalMovieDB.genres[i - 1] = prompt(`Ваш любимый жанр по номером ${i}`);
     }
 }
 
 writeYourGenres();
-
+ */
