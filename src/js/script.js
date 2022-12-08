@@ -328,7 +328,7 @@ console.log(calcSumm(2, 4)); */
 
 console.log(getMathResult(2, 2)); */
 
-function calculateVolumeAndArea(edgesOfCube){ // мой вариант домашнего задания
+/* function calculateVolumeAndArea(edgesOfCube){ // мой вариант домашнего задания
     const volumeOfCube = edgesOfCube * edgesOfCube * edgesOfCube;
     const areaOfFaceOfCube = edgesOfCube * edgesOfCube;
     const areaOfCube = areaOfFaceOfCube * 6;
@@ -358,11 +358,36 @@ function calculateVolumeAndArea(length) { // вариант учителя
     area = 6 * (length * length);
 
     return `Объем куба: ${volume}, площадь всей поверхности: ${area}`;
+} */
+
+function getCoupeNumber(num) {
+
+    if (num >= 1 && num <=4 && num !== 'number' && num > 0 && Number.isInteger(num)) {
+        return console.log(1);
+    } else if (num >= 5 && num <= 8 && num !== 'number' && num > 0 && Number.isInteger(num)) {
+        return console.log(2);
+    } else if (num >= 9 && num <= 12 && num !== 'number' && num > 0 && Number.isInteger(num)) {
+        return console.log(3);
+    } else if (num >= 13 && num <= 16 && num !== 'number' && num > 0 && Number.isInteger(num)) {
+        return console.log(4);
+    } else if (num >= 17 && num <= 20 && num !== 'number' && num > 0 && Number.isInteger(num)) {
+        return console.log(5);
+    } else if (num >= 21 && num <= 24 && num !== 'number' && num > 0 && Number.isInteger(num)) {
+        return console.log(6);
+    } else if (num >= 25 && num <= 28 && num !== 'number' && num > 0 && Number.isInteger(num)) {
+        return console.log(7);
+    } else if (num >= 29 && num <= 32 && num !== 'number' && num > 0 && Number.isInteger(num)) {
+        return console.log(8);
+    } else if (num >= 33 && num <= 36 && num !== 'number' && num > 0 && Number.isInteger(num)) {
+        return console.log(9);
+    } else if (num === 0 || num > 36 && num !== 'number' && num > 0 && Number.isInteger(num)) {
+        return console.log('Таких мест в вагоне не существует');
+    } else {
+        return console.log('Ошибка. Проверьте правильность введенного номера места');
+    }
 }
 
-
-
-
+getCoupeNumber('Hello');
 
 
 
