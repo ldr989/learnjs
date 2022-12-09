@@ -360,6 +360,8 @@ function calculateVolumeAndArea(length) { // вариант учителя
     return `Объем куба: ${volume}, площадь всей поверхности: ${area}`;
 } */
 
+/* 
+//Мой вариант решения задачи №7
 function getCoupeNumber(num) {
 
     if (num >= 1 && num <=4 && num !== 'number' && num > 0 && Number.isInteger(num)) {
@@ -390,7 +392,50 @@ function getCoupeNumber(num) {
 getCoupeNumber('Hello');
 
 
+//Вариант Ивана Петриченко
 
+function getCoupeNumber(seatNumber) {
+    if (typeof (seatNumber) !== 'number' || seatNumber < 0 || !Number.isInteger(seatNumber)) {
+        return "Ошибка. Проверьте правильность введенного номера места";
+    }
+
+    if (seatNumber === 0 || seatNumber > 36) {
+        return "Таких мест в вагоне не существует";
+    }
+
+    return console.log(Math.ceil(seatNumber / 4));
+    // тут очень много вариантов решения, но выбрал один из элегантных :)
+}
+
+getCoupeNumber(1);
+ */
+
+function getTimeFromMinutes(time) {
+    let mins = time % 60;
+    let hours = (time - mins) / 60;
+    let hourDecl,
+        minDecl;
+    if (hours === 1) {
+        hourDecl = 'час';
+    } else if (hours >= 2 && hours <= 4) {
+        hourDecl = 'часа';
+    } else if (hours === 0 || hours >= 5) {
+        hourDecl = 'часов';
+    }
+
+    if (mins === 1) {
+        minDecl = 'минута';
+    } else if (mins % 10 === 2 || mins % 10 === 3 || mins % 10 === 4) {
+        minDecl = 'минуты';
+    } else {
+        minDecl = 'минут';
+    }
+    
+    let rezult = `Это ${hours} ${hourDecl} и ${mins} ${minDecl}`;
+    return console.log(rezult);
+}
+
+getTimeFromMinutes(1980);
 /* let numberOfFilms;
 
 function start () {
