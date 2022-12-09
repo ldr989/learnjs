@@ -410,7 +410,12 @@ function getCoupeNumber(seatNumber) {
 getCoupeNumber(1);
  */
 
+/* // Упражнение 8.1 мой вариант решения:
 function getTimeFromMinutes(time) {
+    if (typeof (time) !== "number" || time < 0 || !Number.isInteger(time)) {
+        return console.log('Ошибка, проверьте данные');
+    }
+    
     let mins = time % 60;
     let hours = (time - mins) / 60;
     let hourDecl,
@@ -431,11 +436,70 @@ function getTimeFromMinutes(time) {
         minDecl = 'минут';
     }
     
-    let rezult = `Это ${hours} ${hourDecl} и ${mins} ${minDecl}`;
-    return console.log(rezult);
+    let result = `Это ${hours} ${hourDecl} и ${mins} ${minDecl}`;
+    return console.log(result);
 }
 
-getTimeFromMinutes(1980);
+getTimeFromMinutes(11);
+
+// Упражнение 8.1 вариант Ивана Петриченко:
+function getTimeFromMinutes(minutesTotal) {
+    if (typeof (minutesTotal) !== 'number' || minutesTotal < 0 || !Number.isInteger(minutesTotal)) {
+        return "Ошибка, проверьте данные";
+    }
+
+    const hours = Math.floor(minutesTotal / 60);
+    const minutes = minutesTotal % 60;
+
+    let hoursStr = '';
+
+    switch (hours) {
+        case 0:
+            hoursStr = 'часов';
+            break;
+        case 1:
+            hoursStr = 'час';
+            break;
+        case 2:
+        case 3:
+        case 4:
+            hoursStr = 'часа';
+            break;
+        default:
+            hoursStr = 'часов';
+    }
+
+    return `Это ${hours} ${hoursStr} и ${minutes} минут`;
+}
+
+getTimeFromMinutes(180); */
+
+// Упражнение 8.2 мой вариант решения:
+function findMaxNumber(a, b, c, d) {
+    if (/* arguments.length !== 4 ||  */typeof (a, b, c, d) !== 'number') {
+        return console.log(0);
+    } else {
+        return console.log(Math.max(a, b, c, d));
+    }
+    
+}
+findMaxNumber(23, -3, 42, 222);
+
+// Упражнение 8.2 вариант Ивана Петриченко:
+
+function findMaxNumber(a, b, c, d) {
+    // Самое простое - это использовать Math.max :)
+    // А оптимизировать такую проверку мы научимся совсем скоро
+    if (typeof (a) !== 'number' ||
+        typeof (b) !== 'number' ||
+        typeof (c) !== 'number' ||
+        typeof (d) !== 'number') {
+        return console.log(0);
+    } else {
+        return console.log(Math.max(a, b, c, d));
+    }
+}
+findMaxNumber(23, -3, 42, 122);
 /* let numberOfFilms;
 
 function start () {
