@@ -475,8 +475,9 @@ function getTimeFromMinutes(minutesTotal) {
 getTimeFromMinutes(180); */
 
 // Упражнение 8.2 мой вариант решения:
-function findMaxNumber(a, b, c, d) {
-    if (/* arguments.length !== 4 ||  */typeof (a, b, c, d) !== 'number') {
+
+/* function findMaxNumber(a, b, c, d) {
+    if (typeof (a, b, c, d) !== 'number') {
         return console.log(0);
     } else {
         return console.log(Math.max(a, b, c, d));
@@ -500,6 +501,66 @@ function findMaxNumber(a, b, c, d) {
     }
 }
 findMaxNumber(23, -3, 42, 122);
+ */
+
+// Упражнение 9 (Числа Фибоначчи). Мой вариант:
+
+function fib(num) {
+    let a = 0,
+        b = 1;
+
+    let fibDB = [];
+        fibDB[0] = 0;
+        fibDB[1] = 1;
+
+    for (let i = 3; i <= num; i++) {
+        let c = a + b;
+        a = b;
+        b = c;
+        fibDB.push(b);
+    }
+    if (isNaN(num) || num <= 0 || !Number.isInteger(num)) {
+        return console.log('');
+    } else if (num === 1) {
+        return console.log('0');
+    } else if (num === 2) {
+        return console.log('0 1');
+    } else {
+        return console.log(fibDB.join(' '));
+    }
+}
+fib(2);
+
+// Упражнение 9 (Числа Фибоначчи). Вариант Ивана Петриченко:
+
+function fib(num) {
+    if (typeof (num) !== 'number' || num <= 0 || !Number.isInteger(num)) {
+        return "";
+    }
+
+    let result = '';
+    let first = 0;
+    let second = 1;
+
+    for (let i = 0; i < num; i++) {
+        if (i + 1 === num) {
+            result += `${first}`;
+            // Без пробела в конце
+        } else {
+            result += `${first} `;
+        }
+
+        let third = first + second;
+        first = second;
+        second = third;
+    }
+
+    return console.log(result);
+}
+
+fib(2);
+
+
 /* let numberOfFilms;
 
 function start () {
