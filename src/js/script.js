@@ -504,7 +504,7 @@ findMaxNumber(23, -3, 42, 122);
  */
 
 // Упражнение 9 (Числа Фибоначчи). Мой вариант:
-
+/*  
 function fib(num) {
     let a = 0,
         b = 1;
@@ -559,9 +559,68 @@ function fib(num) {
 }
 
 fib(2);
+ */
+
+const personalPlanPeter = {
+    name: "Peter",
+    age: "29",
+    skills: {
+        languages: ['ru', 'eng'],
+        programmingLangs: {
+            js: '20%',
+            php: '10%',
+            java: '60%',
+            pithon: '10%',
+            с: '10%',
+            go: '5%',
+            fortran: '0%'
+        },
+        exp: '1 month'
+    }
+};
+
+/* function showExperience(plan) {
+    const exp = plan.skills.exp;
+    return console.log(exp);
+}
+showExperience(personalPlanPeter); */
+function showProgrammingLangs(plan) {
+
+    const langs = plan.skills.programmingLangs;
+
+    const keyNum = Object.keys(langs);
+    const optNum = Object.values(langs);
+    /* for (let key in langs) {
+        if (keyNum.length == 2) {
+            return console.log(`Язык ${keyNum[0]} изучен на ${optNum[0]} Язык ${keyNum[1]} изучен на ${optNum[1]}`);
+        }
+
+        
+    } */
+    let answer = [];
+
+    /* for (let i = 1; i <= keyNum.length; i++) {
+        console.log(`Язык ${keyNum[i-1]} изучен на ${optNum[i-1]}`);
+    } */
+    let i = 0;
+    do {
+        answer.push(`Язык ${keyNum[i]} изучен на ${optNum[i]}\n`);
+        i++;
+    } while (i < keyNum.length);
+    if (keyNum.length > 0) {
+        return console.log(answer.join(''));
+    } else {
+        return console.log('');
+    }
+}
+showProgrammingLangs(personalPlanPeter);
 
 
-/* let numberOfFilms;
+
+
+
+
+let numberOfFilms;
 
 function start () {
     numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
@@ -584,7 +643,7 @@ const personalMovieDB = {
 
 function rememberMyFilms() {
     for (let i = 0; i < 2; i++){
-        const a = prompt('Один из последних просмотренных фильмов?', ''),
+        const a = prompt('Один из последних просмотренных фильмов?', '').trim(),
               b = prompt('На сколько оцените его?', '');
         
         if (a != null && b != null && a != '' && b != '' && a.length < 50) {
@@ -631,4 +690,4 @@ function writeYourGenres() {
 }
 
 writeYourGenres();
- */
+
