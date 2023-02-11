@@ -1,6 +1,6 @@
-/* 'use strict';
+'use strict';
 
-const personalPlanPeter = {
+/* const personalPlanPeter = {
     name: "Peter",
     age: "29",
     skills: {
@@ -73,7 +73,7 @@ standardizeStrings(favoriteCities); */
 
 // Exercise 12.1
 
-const someString = 'This is some strange string';
+/* const someString = 'This is some strange string';
 
 function reverse(str) {
     
@@ -86,4 +86,13 @@ function reverse(str) {
     
 }
 
-reverse(someString);
+reverse(someString); */
+
+// Exercise 12.2
+
+const baseCurrencies = ['USD', 'EUR'];
+const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
+
+function availableCurr(arr, missingCurr) {
+
+}
