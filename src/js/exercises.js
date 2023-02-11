@@ -1,4 +1,4 @@
-'use strict';
+/* 'use strict';
 
 const personalPlanPeter = {
     name: "Peter",
@@ -18,8 +18,9 @@ const personalPlanPeter = {
     },
     showAgeAndLangs: function(plan) {
         const age = plan.age;
-        const languages = plan.skills.languages;
-        console.log(`Мне ${age} и я владею языками: ${languages}`);
+        let languages = plan.skills.languages;
+        let newLanguages = languages.join(' ');
+        console.log(`Мне ${age} и я владею языками: ${newLanguages.toUpperCase()}`);
     }
 };
 personalPlanPeter.showAgeAndLangs(personalPlanPeter);
@@ -43,4 +44,10 @@ function showProgrammingLangs(plan) {
         return console.log('');
     }
 }
-showProgrammingLangs(personalPlanPeter);
+showProgrammingLangs(personalPlanPeter); */
+
+const family = ['Peter', 'Ann', 'Alex', 'Linda'];
+
+function showFamily(arr) {
+
+}
