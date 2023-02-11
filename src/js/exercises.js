@@ -46,8 +46,27 @@ function showProgrammingLangs(plan) {
 }
 showProgrammingLangs(personalPlanPeter); */
 
-const family = ['Peter', 'Ann', 'Alex', 'Linda'];
+// Exercise 11.1
+
+/* const family = ['Peter', 'Ann', 'Alex', 'Linda'];
 
 function showFamily(arr) {
-
+    const members = arr.join(' ');
+    if (typeof (members) == 'string', members !== '') {
+        return console.log(`Семья состоит из: ${members}`);
+    } else {
+        return console.log('Семья пуста');
+    }
 }
+showFamily(family); */
+
+// Exercise 11.2
+
+const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
+
+function standardizeStrings(arr) {
+    const cities = arr.join('\n');
+    console.log(cities.toLowerCase());
+}
+
+standardizeStrings(favoriteCities);
