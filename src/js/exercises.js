@@ -62,11 +62,28 @@ showFamily(family); */
 
 // Exercise 11.2
 
-const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
+/* const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
 
 function standardizeStrings(arr) {
     const cities = arr.join('\n');
     console.log(cities.toLowerCase());
 }
 
-standardizeStrings(favoriteCities);
+standardizeStrings(favoriteCities); */
+
+// Exercise 12.1
+
+const someString = 'This is some strange string';
+
+function reverse(str) {
+    
+    if (typeof str === 'string') {
+        str = str.split("").reverse().join("");
+        console.log(str);
+    } else {
+        console.log("Ошибка!");
+    }
+    
+}
+
+reverse(someString);
