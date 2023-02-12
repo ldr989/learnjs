@@ -90,9 +90,38 @@ reverse(someString); */
 
 // Exercise 12.2
 
-const baseCurrencies = ['USD', 'EUR'];
+const baseCurrencies = ['USD', 'EUR']; 
 const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
+const allCurrencies = ['USD', 'EUR', 'UAH', 'RUB', 'CNY'];
+const arr = [...baseCurrencies, ...additionalCurrencies]; // all available currencies
 
-function availableCurr(arr, missingCurr) {
+Array.prototype.diff = function (a) {
+    return this.filter(function (i) { return a.indexOf(i) < 0; });
+};
 
+let missingCurr = allCurrencies.diff(arr); //currencies that are missing
+
+function availableCurr(arr, missingCurr) { 
+    if (arr.length == 0) {
+        return console.log('Нет доступных валют');
+    } else {
+        arr.forEach(function(item, i, arr){
+            if (item == missingCurr) {
+                arr.splice(i, 1);
+            }
+        });
+        console.log(`Доступные валюты:\n${arr.join("\n")}\n`);
+    }
 }
+availableCurr(arr, missingCurr);
+
+
+
+/* Пример:
+
+availableCurr(['UAH', 'RUB', 'CNY'], 'CNY')
+Вернет строку:
+
+Доступные валюты:
+UAH
+RUB */
