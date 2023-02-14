@@ -593,7 +593,7 @@ reverse(someString); */
 
 // Exercise 12.2
 
-const baseCurrencies = ['USD', 'EUR']; 
+/* const baseCurrencies = ['USD', 'EUR']; 
 const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
 const allCurrencies = ['USD', 'EUR', 'UAH', 'RUB', 'CNY'];
 const arr = [...baseCurrencies, ...additionalCurrencies]; // all available currencies
@@ -616,7 +616,7 @@ function availableCurr(arr, missingCurr) {
         console.log(`Доступные валюты:\n${arr.join("\n")}\n`);
     }
 }
-availableCurr(arr, missingCurr);
+availableCurr(arr, missingCurr); */
 
 
 
@@ -628,3 +628,40 @@ availableCurr(['UAH', 'RUB', 'CNY'], 'CNY')
 Доступные валюты:
 UAH
 RUB */
+
+// Task 13
+
+const shoppingMallData = {  // обьект
+    shops: [                // массив
+        {                   // обьект
+            width: 10,      // значения
+            length: 5
+        },
+        {
+            width: 15,
+            length: 7
+        },
+        {
+            width: 20,
+            length: 5
+        },
+        {
+            width: 8,
+            length: 10
+        }
+    ],
+    height: 5,
+    moneyPer1m3: 30,
+    budget: 50000
+};
+
+function isBudgetEnough(data) {
+    let areaCalc;
+    for (let i = 0; i <= shoppingMallData.shops.length; i++) {
+        areaCalc += shoppingMallData.shops[i] * shoppingMallData.shops[i];
+    }
+    console.log(areaCalc);
+    console.log(shoppingMallData.shops.length);
+}
+
+isBudgetEnough(shoppingMallData);
