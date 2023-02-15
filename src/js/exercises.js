@@ -656,12 +656,21 @@ const shoppingMallData = {  // обьект
 };
 
 function isBudgetEnough(data) {
-    let areaCalc;
-    for (let i = 0; i <= shoppingMallData.shops.length; i++) {
-        areaCalc += shoppingMallData.shops[i] * shoppingMallData.shops[i];
+    // total area of all shops m2
+    let areaCalc = 0;
+    for (let i = 0; i < data.shops.length; i++) { 
+        areaCalc += data.shops[i].width * data.shops[i].length;
     }
-    console.log(areaCalc);
-    console.log(shoppingMallData.shops.length);
+    // total cubic capacity of all stores m3
+    const cubicCapacity = areaCalc * data.height;
+    // cost calculation
+    const cost = cubicCapacity * data.moneyPer1m3;
+    // comparison with budget
+    if (data.budget >= cost) {
+        return console.log('Бюджета достаточно');
+    } else {
+        return console.log('Бюджета недостаточно');
+    }
 }
 
 isBudgetEnough(shoppingMallData);
