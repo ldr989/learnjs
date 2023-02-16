@@ -631,7 +631,7 @@ RUB */
 
 // Task 13
 
-const shoppingMallData = {  // обьект
+/* const shoppingMallData = {  // обьект
     shops: [                // массив
         {                   // обьект
             width: 10,      // значения
@@ -673,4 +673,26 @@ function isBudgetEnough(data) {
     }
 }
 
-isBudgetEnough(shoppingMallData);
+isBudgetEnough(shoppingMallData); */
+
+// Task 14
+
+const students = ['Peter', 'Andrew', 'Ann', 'Mark', 'Josh', 'Sandra', 'Cris', 'Bernard', 'Takesi', 'Sam', 'Stieve'];
+
+function sortStudentsByGroups(arr) {
+    // copy and sort by name
+    const newArr = arr.slice().sort();
+    // divide into groups
+    const sizeOfArr = 3;// size of sub arrays
+    const subArr = []; // result repository
+    for (let i = 0; i < Math.ceil(newArr.length/sizeOfArr); i++) {
+        subArr[i] = newArr.slice((i * sizeOfArr), (i * sizeOfArr) + sizeOfArr);
+    }
+    // checking the condition and output the result
+    if (subArr.length <= 3) {
+        console.log([...subArr, 'Оставшиеся студенты: -']);
+    } else {
+        console.log([subArr[0], subArr[1], subArr[2], `Оставшиеся студенты: ${subArr[3].join(', ')}`]);
+    }
+}
+sortStudentsByGroups(students);
