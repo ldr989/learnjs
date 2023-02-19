@@ -127,7 +127,7 @@ console.log(personalMovieDB); */
 
 // Код возьмите из предыдущего домашнего задания
 
-const personalMovieDB = {
+/* const personalMovieDB = {
     count: 0,
     movies: {},
     actors: {},
@@ -178,7 +178,7 @@ const personalMovieDB = {
         }
     },
     writeYourGenres: function() {
-        for (let i = 1; i < 2; i++) {
+        for (let i = 1; i < 2; i++) { */
             /* let genres = prompt(`Ваш любимый жанр по номером ${i}`).toLowerCase();
             if (genres ==="" || genres == null) {
                 console.log("Вы ввели некорректные данные или не ввели их вовсе");
@@ -186,7 +186,7 @@ const personalMovieDB = {
             } else {
                 personalMovieDB.genres[i - 1] = genres;
             } */
-            let genres = prompt(`Введите ваши любимые жанры через запятую`).toLowerCase();
+            /* let genres = prompt(`Введите ваши любимые жанры через запятую`).toLowerCase();
 
             if (genres === "" || genres == null) {
                 console.log("Вы ввели некорректные данные или не ввели их вовсе");
@@ -201,5 +201,61 @@ const personalMovieDB = {
             console.log(`Любимый жанр ${i + 1} - это ${item}`);
         });
     }
-};
+}; */
 
+// task 15
+
+const restorantData = {
+    menu: [
+        {
+            name: 'Salad Caesar',
+            price: '14$'
+        },
+        {
+            name: 'Pizza Diavola',
+            price: '9$'
+        },
+        {
+            name: 'Beefsteak',
+            price: '17$'
+        },
+        {
+            name: 'Napoleon',
+            price: '7$'
+        }
+    ],
+    waitors: [
+        { name: 'Alice', age: 22 }, { name: 'John', age: 24 }
+    ],
+    averageLunchPrice: '20$',
+    openNow: true
+};
+const openNow = restorantData.openNow;
+
+function isOpen(prop) {
+    let answer = '';
+    prop ? answer = 'Открыто' : answer = 'Закрыто';
+
+    return answer;
+}
+
+console.log(isOpen(openNow));
+
+function isAverageLunchPriceTrue(fDish, sDish, average) {
+    if (+fDish.price.slice(0, -1) + (sDish.price) < average) {
+        return 'Цена ниже средней';
+    } else {
+        return 'Цена выше средней';
+    }
+}
+
+console.log(isAverageLunchPriceTrue(restorantData.menu[0], restorantData.menu[1], restorantData.averageLunchPrice));
+
+function transferWaitors(data) {
+    const copy = Object.assign({}, data);
+
+    copy.waitors[0] = { name: 'Mike', age: 32 };
+    return copy;
+}
+
+transferWaitors(restorantData);

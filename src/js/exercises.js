@@ -677,7 +677,7 @@ isBudgetEnough(shoppingMallData); */
 
 // Task 14
 
-const students = ['Peter', 'Andrew', 'Ann', 'Mark', 'Josh', 'Sandra', 'Cris', 'Bernard', 'Takesi', 'Sam', 'Stieve'];
+/* const students = ['Peter', 'Andrew', 'Ann', 'Mark', 'Josh', 'Sandra', 'Cris', 'Bernard', 'Takesi', 'Sam', 'Stieve'];
 
 function sortStudentsByGroups(arr) {
     // copy and sort by name
@@ -695,4 +695,6 @@ function sortStudentsByGroups(arr) {
         console.log([subArr[0], subArr[1], subArr[2], `Оставшиеся студенты: ${subArr[3].join(', ')}`]);
     }
 }
-sortStudentsByGroups(students);
+sortStudentsByGroups(students); */
+
+
