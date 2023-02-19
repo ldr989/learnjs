@@ -233,8 +233,8 @@ const restorantData = {
 const openNow = restorantData.openNow;
 
 function isOpen(prop) {
-    let answer = '';
-    prop ? answer = 'Открыто' : answer = 'Закрыто';
+    let answer = prop ? 'Открыто' :'Закрыто';
+    
 
     return answer;
 }
