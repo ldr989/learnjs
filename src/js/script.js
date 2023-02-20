@@ -241,21 +241,27 @@ function isOpen(prop) {
 
 console.log(isOpen(openNow));
 
+
 function isAverageLunchPriceTrue(fDish, sDish, average) {
-    if (+fDish.price.slice(0, -1) + (sDish.price) < average) {
+    if (+fDish.price.slice(0, -1) + (+sDish.price.slice(0, -1)) < +average.slice(0, -1)) {
         return 'Цена ниже средней';
     } else {
         return 'Цена выше средней';
+        
     }
 }
 
 console.log(isAverageLunchPriceTrue(restorantData.menu[0], restorantData.menu[1], restorantData.averageLunchPrice));
 
 function transferWaitors(data) {
-    const copy = Object.assign({}, data);
+    let copy = Object.assign({}, data);
+    const cloneMenu = Object.assign(copy.menu, data.menu);
+    const cloneWaitors = Object.assign(copy.waitors, data.waitors);
 
     copy.waitors[0] = { name: 'Mike', age: 32 };
-    return copy;
+    return console.log(copy);
 }
 
+
 transferWaitors(restorantData);
+console.log(restorantData);
