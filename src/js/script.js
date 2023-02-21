@@ -254,9 +254,11 @@ function isAverageLunchPriceTrue(fDish, sDish, average) {
 console.log(isAverageLunchPriceTrue(restorantData.menu[0], restorantData.menu[1], restorantData.averageLunchPrice));
 
 function transferWaitors(data) {
+
     let copy = Object.assign({}, data);
-    const cloneMenu = Object.assign(copy.menu, data.menu);
-    const cloneWaitors = Object.assign(copy.waitors, data.waitors);
+    
+    copy.menu = data.menu.slice();
+    copy.waitors = data.waitors.slice();
 
     copy.waitors[0] = { name: 'Mike', age: 32 };
     return console.log(copy);
