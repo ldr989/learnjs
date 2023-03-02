@@ -697,4 +697,25 @@ function sortStudentsByGroups(arr) {
 }
 sortStudentsByGroups(students); */
 
+// Task 16
 
+// n! = n * (n - 1) * (n - 2) * ...* 1
+
+/* Напишите функцию, которая вычисляет факториал.
+
+Задание простое, но нужно понимать что такое факториал вообще.
+Факториал  – это число, умноженное на "себя минус один",
+ затем на "себя минус два", и так далее до 1. Факториал n обозначается как n! */
+
+
+function factorial(n) {
+    if (n === 1 || n <= 0) {
+        return 1;
+    } else if (typeof n !== 'number') {
+        return 'Введите число';
+    } else {
+        return n * factorial(n-1);
+    }
+}
+
+console.log(factorial(5));
