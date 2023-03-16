@@ -708,7 +708,7 @@ sortStudentsByGroups(students); */
  затем на "себя минус два", и так далее до 1. Факториал n обозначается как n! */
 
 
-function factorial(n) {
+/* function factorial(n) {
     if (n === 1 || n <= 0) {
         return 1;
     } else if (typeof n !== 'number' || n % 1 !== 0) {
@@ -716,6 +716,31 @@ function factorial(n) {
     } else {
         return n * factorial(n - 1);
     }
-}
+} */
 
 console.log(factorial(2.2));
+
+function amountOfPages(summary) {
+
+    const containerOfNumbers = [];
+
+    for (let i = 1; i <= summary; i++) {
+        containerOfNumbers.push(String(i));
+    }
+
+    function counter(arr) {
+        let amount = 0;
+        let result = 0;
+        arr.forEach((element, i) => {
+            amount += element.length;
+            if (amount == arr.length) {
+                result = (i + 1);
+            }
+
+        });
+        return result;
+    }
+    return console.log(typeof counter(containerOfNumbers));
+}
+
+amountOfPages(185);
