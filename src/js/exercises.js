@@ -747,15 +747,15 @@ amountOfPages(185); */
 
 function isPangram(string) {
     if (
-        string.indexOf('a') >= 1 && string.indexOf('b') >= 1 && string.indexOf('c') >= 1 &&
-        string.indexOf('d') >= 1 && string.indexOf('e') >= 1 && string.indexOf('f') >= 1 &&
-        string.indexOf('g') >= 1 && string.indexOf('h') >= 1 && string.indexOf('i') >= 1 &&
-        string.indexOf('j') >= 1 && string.indexOf('k') >= 1 && string.indexOf('l') >= 1 &&
-        string.indexOf('m') >= 1 && string.indexOf('n') >= 1 && string.indexOf('o') >= 1 &&
-        string.indexOf('p') >= 1 && string.indexOf('q') >= 1 && string.indexOf('r') >= 1 &&
-        string.indexOf('s') >= 1 && string.indexOf('t') >= 1 && string.indexOf('u') >= 1 &&
-        string.indexOf('v') >= 1 && string.indexOf('w') >= 1 && string.indexOf('x') >= 1 &&
-        string.indexOf('y') >= 1 && string.indexOf('z') >= 1 
+        string.indexOf('a') >= 0 && string.indexOf('b') >= 0 && string.indexOf('c') >= 0 &&
+        string.indexOf('d') >= 0 && string.indexOf('e') >= 0 && string.indexOf('f') >= 0 &&
+        string.indexOf('g') >= 0 && string.indexOf('h') >= 0 && string.indexOf('i') >= 0 &&
+        string.indexOf('j') >= 0 && string.indexOf('k') >= 0 && string.indexOf('l') >= 0 &&
+        string.indexOf('m') >= 0 && string.indexOf('n') >= 0 && string.indexOf('o') >= 0 &&
+        string.indexOf('p') >= 0 && string.indexOf('q') >= 0 && string.indexOf('r') >= 0 &&
+        string.indexOf('s') >= 0 && string.indexOf('t') >= 0 && string.indexOf('u') >= 0 &&
+        string.indexOf('v') >= 0 && string.indexOf('w') >= 0 && string.indexOf('x') >= 0 &&
+        string.indexOf('y') >= 0 && string.indexOf('z') >= 0 
         ) {
         return console.log(true);
     }
@@ -764,5 +764,5 @@ function isPangram(string) {
     }
 }
 
-isPangram('The quick brown fox jumps over the lazy dog');
+isPangram('quick brown fox jumps over the lazy dog');
 
