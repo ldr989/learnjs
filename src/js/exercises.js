@@ -745,7 +745,7 @@ sortStudentsByGroups(students); */
 
 amountOfPages(185); */
 
-function isPangram(string) {
+/* function isPangram(string) {
     if (
         string.indexOf('a') >= 0 && string.indexOf('b') >= 0 && string.indexOf('c') >= 0 &&
         string.indexOf('d') >= 0 && string.indexOf('e') >= 0 && string.indexOf('f') >= 0 &&
@@ -764,5 +764,23 @@ function isPangram(string) {
     }
 }
 
-isPangram('quick brown fox jumps over the lazy dog');
+isPangram('quick brown fox jumps over the lazy dog'); */
 
+
+
+function deepCount(a) {
+    let counter = 0;
+    for (let i = 0; i < a.length; i++) {
+        counter++;
+        if(typeof a[i] == 'object') {
+            counter += deepCount(a[i]);
+        }
+    }
+    console.log(counter);
+    return counter;
+
+}
+
+
+
+deepCount([[[[[[[[[]]]]]]]]]);
