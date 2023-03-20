@@ -783,4 +783,4 @@ function deepCount(a) {
 
 
 
-deepCount([[[[[[[[[]]]]]]]]]);
+deepCount([[[[[[[[[1]]]]]]]]]);
